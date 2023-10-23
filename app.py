@@ -7,6 +7,7 @@ from dash import Dash, dcc, html, Input, Output, State, callback, no_update, ALL
 app = Dash(__name__,
            suppress_callback_exceptions=True,
            external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/Dash-Course/US-Exports/2011_us_ag_exports.csv')
 # df = pd.read_csv('./2011_us_ag_exports.csv')
